@@ -60,7 +60,7 @@ end
 
 service 'godns' do
   provider Chef::Provider::Service::Upstart
-  subscribes :restart, "remote_file[#{dest_path}]"
-  action [:enable]
+  subscribes :restart, "remote_file[#{archive_dest_path}]"
+  action [:enable, :start]
 end
 
