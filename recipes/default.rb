@@ -51,7 +51,7 @@ end
 bash "setup godns as default dns" do
   code <<-EOH
     cp /etc/resolv.conf #{node['godns']['resolv_conf']}
-    echo -e "nameserver 127.0.0.1\n" > /etc/resolv.conf
+    echo -e "nameserver #{node['godns']['default_resolv_host']}\n" > /etc/resolv.conf
   EOH
   only_if do
     node['godns']['default_dns'] and not File.exists?(node['godns']['resolv_conf'])

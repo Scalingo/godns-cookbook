@@ -8,6 +8,7 @@ default["godns"] = {
   # If default_dns is set, it copies /etc/resolv.conf to node['godns']['resolv_conf']
   # and changes /etc/resolv.conf in order to use 127.0.0.1
   "default_dns" => false,
+  "default_resolv_host" => "127.0.0.1",
 
   "debug" => false,
   "host" => "127.0.0.1",
