@@ -1,4 +1,4 @@
-name             'acadock'
+name             'godns'
 maintainer       'Leo Unbekandt'
 maintainer_email 'leo.unbekandt@appsdeck.eu'
 license          'MIT'

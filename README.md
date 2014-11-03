@@ -21,12 +21,26 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
+    <td><tt>['godns']['download_url']</tt></td>
+    <td>string</td>
+    <td>Download URL of binary archive</td>
+    <td><tt>https://github.com/Scalingo/godns/releases/download/</tt></td>
+  </tr>
+  <tr>
     <td><tt>['godns']['version']</tt></td>
     <td>string</td>
     <td>Version of the executable</td>
-    <tdL><tt>v1.1</tt></td>
+    <td><tt>v1.1</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['godns']['arch']</tt></td>
+    <td>string</td>
+    <td>Target architecture</td>
+    <td><tt>amd64</tt></td>
   </tr>
 </table>
+
+See https://github.com/Scalingo/godns-cookbook/blob/master/attributes/default.rb for details
 
 Usage
 -----
