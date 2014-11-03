@@ -3,7 +3,8 @@
 # Toml config file
 
 Title = "GODNS"
-Version = <%= node['godns']['version'] %>
+<%- version = node['godns']['version'] %>
+Version = <%= version.start_with? "v" ? version[1..-1] : version %>
 Author = "kenshin"
 
 Debug = <%= node['godns']['debug'].to_s %>
@@ -21,7 +22,7 @@ timeout = <%= node['godns']['resolv_timeout'] %> # seconds
 [redis]
 host = <%= redis_uri.host %>
 port = <%= redis_uri.port %>
-db = <%= redis_db != "" ? redis_db : "0" %>
+db = <%= redis_db.nil? ? "0" : redis_db %>
 password = <%= redis_uri.password %>
 
 [log]
