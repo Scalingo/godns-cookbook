@@ -3,8 +3,7 @@
 # Toml config file
 
 Title = "GODNS"
-<%- version = node['godns']['version'] %>
-Version = <%= version.start_with?("v") ? version[1..-1] : version %>
+Version = "<%= node['godns']['version'] %>"
 Author = "kenshin"
 
 Debug = <%= node['godns']['debug'].to_s %>
