@@ -6,6 +6,8 @@
 #
 # License MIT
 #
+
+require 'resolv'
  
 dirname = "godns-" +
            node['godns']['version'] + "-linux-" +

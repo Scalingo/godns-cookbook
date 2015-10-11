@@ -19,7 +19,7 @@ timeout = <%= node['godns']['resolv_timeout'] %> # seconds
 <%- redis_uri = URI(node['godns']['redis']['url']) %>
 <%- redis_db = redis_uri.path[1..-1] %>
 [redis]
-host = "<%= redis_uri.host %>"
+host = "<%= Resolv.getaddress(redis_uri.host) %>"
 port = <%= redis_uri.port %>
 db = <%= redis_db.nil? ? "0" : redis_db %>
 password = "<%= redis_uri.password %>"
