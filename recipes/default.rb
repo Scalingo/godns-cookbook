@@ -2,19 +2,19 @@
 # Cookbook Name:: godns
 # Recipe:: default
 #
-# Copyright 2014, Soulou
+# Copyright 2018, Soulou
 #
 # License MIT
 #
 
 require 'resolv'
- 
+
 dirname = "godns-" +
            node['godns']['version'] + "-linux-" +
            node['godns']['arch']
 archive = "#{dirname}.tar.gz"
 
-download_url = 
+download_url =
   node['godns']['download_url'] + "/" +
   node['godns']['version'] + "/" + archive
 
@@ -40,14 +40,32 @@ template node['godns']['config_path'] do
   notifies :restart, "service[godns]", :delayed
 end
 
-template "/etc/init/godns.conf" do
-  source 'godns.init.conf.erb'
-  mode 0664
-  variables({
-    target: File.join(node['godns']['install_path'], "godns"),
-  })
-  notifies :stop, "service[godns]", :delayed
-  notifies :start, "service[godns]", :delayed
+binary_path = File.join(node['godns']['install_path'], "godns")
+
+if node['init_package'] == "systemd"
+  systemd_unit "godn.service" do
+    systemd_content = {
+      "Unit" => {
+        "Description" => "GoDNS - DNS server backed by redis",
+        "After" => "network.target"
+      },
+      "Service" => {
+        "ExecStart" => "#{binary_path} -c #{node['godns']['config_path']}",
+        "Restart" => "always",
+        "RestartSec" => "30s",
+      }
+    }
+  end
+else
+  template "/etc/init/godns.conf" do
+    source 'godns.init.conf.erb'
+    mode 0664
+    variables({
+      target: binary_path,
+    })
+    notifies :stop, "service[godns]", :delayed
+    notifies :start, "service[godns]", :delayed
+  end
 end
 
 bash "setup godns as default dns" do
@@ -61,7 +79,6 @@ bash "setup godns as default dns" do
 end
 
 service 'godns' do
-  provider Chef::Provider::Service::Upstart
   subscribes :restart, "remote_file[#{archive_dest_path}]"
   action [:enable, :start]
 end

@@ -3,6 +3,12 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+1.2.0
+-----
+
+- [Soulou] Compatibility with godns 1.2
+- [Soulou] Compatibility with Systemd
+
 0.1.0
 -----
 - [Soulou] - First version of cookbook

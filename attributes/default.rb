@@ -1,7 +1,7 @@
 
 default["godns"] = {
   "download_url" => "https://github.com/Scalingo/godns/releases/download/",
-  "version" => "v1.1",
+  "version" => "v1.2",
   "arch" => "amd64",
   "install_path" => "/usr/local/bin",
   "config_path" => "/etc/godns.conf",
@@ -13,11 +13,19 @@ default["godns"] = {
   "debug" => false,
   "host" => "127.0.0.1",
   "port" => 53,
-  "log_file" => "", # stdout
-  "resolv_conf" => "/etc/resolv.conf.godns",
-  "resolv_timeout" => 5,
+
+  "resolv" => {
+    "file" => "/etc/resolv.conf.godns",
+    "timeout" => 5,
+    "setedns0" => true,
+  },
   "redis" => {
     "url" => "redis://127.0.0.1:6379"
+  },
+  "log" => {
+    "stdout" => true,
+    "file" => "",
+    "level" => "INFO",
   },
   "cache" => {
     "backend" => "memory",
@@ -27,7 +35,8 @@ default["godns"] = {
   "hosts" => {
     "enable" => true,
     "file" => "/etc/hosts",
+    "redis_enable" => true,
     "redis_key" => "godns:hosts",
-    "ttl" => 600
+    "ttl" => 600,
   }
 }

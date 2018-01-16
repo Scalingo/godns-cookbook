@@ -13,8 +13,9 @@ host = "<%= node['godns']['host'] %>"
 port = <%= node['godns']['port'] %>
 
 [resolv]
-resolv-file = "<%= node['godns']['resolv_conf'] %>"
-timeout = <%= node['godns']['resolv_timeout'] %> # seconds
+resolv-file = "<%= node['godns']['resolv']['resolv-file'] %>"
+timeout = <%= node['godns']['resolv']['timeout'] %> # seconds
+setedns0 = <%= node['godns']['resolv']['setedns0'].to_s %>
 
 <%- redis_uri = URI(node['godns']['redis']['url']) %>
 <%- redis_db = redis_uri.path[1..-1] %>
@@ -26,10 +27,12 @@ password = "<%= redis_uri.password %>"
 
 [log]
 # If didn't set the log file,log will be redirected to console.
-file = "<%= node['godns']['log_file'] %>"
+stdout = <%= node['godns']['log']['stdout'] %>
+file = "<%= node['godns']['log']['file'] %>"
+level = "<%= node['godns']['logl']['level'] %>"
 
 [cache]
-# backend option [memory|redis]	
+# backend option [memory|redis]
 # redis backend not implemented yet
 backend = "<%= node['godns']['cache']['backend'] %>"
 expire = <%= node['godns']['cache']['expire'] %> # seconds
@@ -39,5 +42,7 @@ maxcount = <%= node['godns']['cache']['maxcount'] %> # If set zero. The Sum of c
 # If set false, will not query hosts file and redis hosts record
 enable = <%= node['godns']['hosts']['enable'].to_s %>
 host-file = "<%= node['godns']['hosts']['file'] %>"
+redis-enable = <%= node['godns']['hosts']['redis_enable'].to_s %>
 redis-key = "<%= node['godns']['hosts']['redis_key'] %>"
 ttl = <%= node['godns']['hosts']['ttl'] %>
+refresh-internal = <%= node['godns']['hosts']['refresh_internal'].to_s %>
