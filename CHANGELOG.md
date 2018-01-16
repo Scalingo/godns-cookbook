@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+1.2.2
+-----
+
+- [Soulou] Correctly copy godns resolv.conf file
+
 1.2.1
 -----
 
