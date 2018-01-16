@@ -29,7 +29,7 @@ password = "<%= redis_uri.password %>"
 # If didn't set the log file,log will be redirected to console.
 stdout = <%= node['godns']['log']['stdout'] %>
 file = "<%= node['godns']['log']['file'] %>"
-level = "<%= node['godns']['logl']['level'] %>"
+level = "<%= node['godns']['log']['level'] %>"
 
 [cache]
 # backend option [memory|redis]

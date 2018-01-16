@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+1.2.1
+-----
+
+- [Soulou] Typo in attribute name
+
 1.2.0
 -----
 
