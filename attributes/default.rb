@@ -1,7 +1,7 @@
 
 default["godns"] = {
   "download_url" => "https://github.com/Scalingo/godns/releases/download/",
-  "version" => "v1.2",
+  "version" => "v1.3",
   "arch" => "amd64",
   "install_path" => "/usr/local/bin",
   "config_path" => "/etc/godns.conf",
@@ -38,5 +38,6 @@ default["godns"] = {
     "redis_enable" => true,
     "redis_key" => "godns:hosts",
     "ttl" => 600,
+    "refresh_interval" => 5,
   }
 }

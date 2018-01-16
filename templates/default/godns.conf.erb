@@ -13,7 +13,7 @@ host = "<%= node['godns']['host'] %>"
 port = <%= node['godns']['port'] %>
 
 [resolv]
-resolv-file = "<%= node['godns']['resolv']['resolv-file'] %>"
+resolv-file = "<%= node['godns']['resolv']['file'] %>"
 timeout = <%= node['godns']['resolv']['timeout'] %> # seconds
 setedns0 = <%= node['godns']['resolv']['setedns0'].to_s %>
 
@@ -45,4 +45,4 @@ host-file = "<%= node['godns']['hosts']['file'] %>"
 redis-enable = <%= node['godns']['hosts']['redis_enable'].to_s %>
 redis-key = "<%= node['godns']['hosts']['redis_key'] %>"
 ttl = <%= node['godns']['hosts']['ttl'] %>
-refresh-internal = <%= node['godns']['hosts']['refresh_internal'].to_s %>
+refresh-interval = <%= node['godns']['hosts']['refresh_interval'].to_s %>
