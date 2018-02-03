@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+1.3.1
+-----
+
+- [Soulou] Fix systemd service configuration
+
 1.3.0
 -----
 

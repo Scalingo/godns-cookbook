@@ -42,7 +42,10 @@ end
 
 binary_path = File.join(node['godns']['install_path'], "godns")
 
+manager = Chef::Provider::Service::Upstart
+
 if node['init_package'] == "systemd"
+  manager = Chef::Provider::Service::Systemd
   systemd_unit "godn.service" do
     systemd_content = {
       "Unit" => {
@@ -79,6 +82,7 @@ bash "setup godns as default dns" do
 end
 
 service 'godns' do
+  provider manager
   subscribes :restart, "remote_file[#{archive_dest_path}]"
   action [:enable, :start]
 end
