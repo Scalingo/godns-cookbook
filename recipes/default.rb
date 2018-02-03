@@ -59,6 +59,7 @@ if node['init_package'] == "systemd"
         "RestartSec" => "30s",
       }
     }
+    content systemd_content
   end
 else
   template "/etc/init/godns.conf" do
