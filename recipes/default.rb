@@ -47,6 +47,7 @@ manager = Chef::Provider::Service::Upstart
 if node['init_package'] == "systemd"
   manager = Chef::Provider::Service::Systemd
   systemd_unit "godn.service" do
+    action :create
     systemd_content = {
       "Unit" => {
         "Description" => "GoDNS - DNS server backed by redis",

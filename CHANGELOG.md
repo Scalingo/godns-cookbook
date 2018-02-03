@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+1.3.2
+-----
+
+- [Soulou] Enforce creation of systemd unit file
+
 1.3.1
 -----
 
