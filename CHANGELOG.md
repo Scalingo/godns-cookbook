@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+1.3.3
+-----
+
+- [Soulou] Fix typo in recipe in systemd unit file
+
 1.3.2
 -----
 
