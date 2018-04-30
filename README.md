@@ -6,6 +6,12 @@ Install godns monitoring tool
 Requirements
 ------------
 
+### Platforms
+
+### Chef
+
+### Cookbooks
+
 None, this is Go !
 
 Attributes
