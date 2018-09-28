@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+Changes up to 1.4.0
+-------------------
+
+- [Soulou] Update default version to 1.4
+
 Changes up to 1.3.4
 -------------------
 

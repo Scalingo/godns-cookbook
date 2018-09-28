@@ -9,9 +9,9 @@
 
 require 'resolv'
 
-dirname = 'godns-' +
-          node['godns']['version'] + '-linux-' +
-          node['godns']['arch']
+dirname = 'godns_' +
+           node['godns']['version'] + "_linux_" +
+           node['godns']['arch']
 archive = "#{dirname}.tar.gz"
 
 download_url =
