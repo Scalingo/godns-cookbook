@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+Changes up to 1.4.1
+-------------------
+
+- [Soulou] Add `interval` in the config file
+
 Changes up to 1.4.0
 -------------------
 

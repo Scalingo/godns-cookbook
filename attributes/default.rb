@@ -18,6 +18,7 @@ default['godns'] = {
     'file' => '/etc/resolv.conf.godns',
     'timeout' => 5,
     'setedns0' => true,
+    'interval' => 200,
   },
   'redis' => {
     'url' => 'redis://127.0.0.1:6379',

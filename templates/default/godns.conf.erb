@@ -16,6 +16,7 @@ port = <%= node['godns']['port'] %>
 resolv-file = "<%= node['godns']['resolv']['file'] %>"
 timeout = <%= node['godns']['resolv']['timeout'] %> # seconds
 setedns0 = <%= node['godns']['resolv']['setedns0'].to_s %>
+interval = <%= node['godns']['resolv']['interval'] %>
 
 <%- redis_uri = URI(node['godns']['redis']['url']) %>
 <%- redis_db = redis_uri.path[1..-1] %>
