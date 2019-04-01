@@ -73,10 +73,9 @@ else
   end
 end
 
-bash 'setup godns as default dns' do
+bash 'use current dns as godns upstream dns' do
   code <<-EOH
     cp /etc/resolv.conf #{node['godns']['resolv']['file']}
-    echo -e "nameserver #{node['godns']['default_resolv_host']}\n" > /etc/resolv.conf
   EOH
   only_if do
     node['godns']['default_dns'] && !File.exist?(node['godns']['resolv']['file'])

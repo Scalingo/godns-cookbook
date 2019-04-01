@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+Changes up to 1.4.2
+-------------------
+
+- [Soulou] Do not replace default DNS, should be handled by other cookbook if required
+
 Changes up to 1.4.1
 -------------------
 
