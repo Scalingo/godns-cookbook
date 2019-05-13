@@ -28,7 +28,7 @@ end
 bash "extract godns #{node['godns']['version']}" do
   code <<-EOH
     tar -C #{Chef::Config[:file_cache_path]} -xvf #{archive_dest_path}
-    cp #{dir_dest_path}/godns #{node['godns']['install_path']}
+    mv #{dir_dest_path}/godns #{node['godns']['install_path']}
   EOH
   subscribes :run, "remote_file[#{archive_dest_path}]"
   action :nothing
