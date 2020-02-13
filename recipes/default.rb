@@ -30,7 +30,7 @@ bash "extract godns #{node['godns']['version']}" do
     tar -C #{Chef::Config[:file_cache_path]} -xvf #{archive_dest_path}
     mv #{dir_dest_path}/godns #{node['godns']['install_path']}
   EOH
-  subscribes :run, "remote_file[#{archive_dest_path}]"
+  subscribes :run, "remote_file[#{archive_dest_path}]", :immediately
   action :nothing
 end
 
