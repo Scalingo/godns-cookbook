@@ -3,6 +3,11 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+Changes up to 1.5.2
+-------------------
+
+- [Soulou] Fix order of operations when extracting godns binary, do it before creating Systemd unit file
+
 Changes up to 1.5.0
 -------------------
 
