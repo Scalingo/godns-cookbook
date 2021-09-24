@@ -47,3 +47,14 @@ redis-enable = <%= node['godns']['hosts']['redis_enable'].to_s %>
 redis-key = "<%= node['godns']['hosts']['redis_key'] %>"
 ttl = <%= node['godns']['hosts']['ttl'] %>
 refresh-interval = <%= node['godns']['hosts']['refresh_interval'].to_s %>
+<% if node['godns']['hosts']['zone'] %>
+zone = <%= node['godns']['hosts']['zone'] %>
+zone-ns = <%= node['godns']['hosts']['zone-ns'] %>
+zone-mbox = <%= node['godns']['hosts']['zone-mbox'] %>
+zone-serial = <%= node['godns']['hosts']['zone-serial'] %>
+zone-refresh = <%= node['godns']['hosts']['zone-refresh'] %>
+zone-retry = <%= node['godns']['hosts']['zone-retry'] %>
+zone-expire = <%= node['godns']['hosts']['zone-expire'] %>
+zone-negcache-ttl = <%= node['godns']['hosts']['zone-negcache-ttl'] %>
+zone-soa-ttl = <%= node['godns']['hosts']['zone-soa-ttl'] %>
+<% end %>
