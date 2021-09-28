@@ -3,6 +3,10 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+Changes up to 1.6.0 2021-09-28
+------------------------------
+- [Soulou] Add 'zone-*' parameters for new features of godns
+
 Changes up to 1.5.2
 -------------------
 
