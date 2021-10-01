@@ -3,6 +3,10 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+Changes up to 1.6.2 2021-09-29
+------------------------------
+- [Soulou] Missing quotes in configuration file when using `zone` parameter
+
 Changes up to 1.6.1 2021-09-29
 ------------------------------
 - [Soulou] Update godns to 1.6
