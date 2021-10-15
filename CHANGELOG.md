@@ -3,6 +3,10 @@ godns CHANGELOG
 
 This file is used to list changes made in each version of the godns cookbook.
 
+Changes up to 1.6.3 2021-10-15
+------------------------------
+- [Soulou] Fix systemd unit file to correctly start godns on boot
+
 Changes up to 1.6.2 2021-09-29
 ------------------------------
 - [Soulou] Missing quotes in configuration file when using `zone` parameter
