@@ -58,6 +58,9 @@ if node['init_package'] == 'systemd'
         'Restart' => 'always',
         'RestartSec' => '30s',
       },
+      'Install' => {
+        'WantedBy' => 'multi-user.target',
+      },
     }
     content systemd_content
   end
