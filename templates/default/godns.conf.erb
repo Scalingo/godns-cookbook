@@ -58,3 +58,16 @@ zone-expire = <%= node['godns']['hosts']['zone-expire'] %>
 zone-negcache-ttl = <%= node['godns']['hosts']['zone-negcache-ttl'] %>
 zone-soa-ttl = <%= node['godns']['hosts']['zone-soa-ttl'] %>
 <% end %>
+
+[zones]
+<% nodes['godns']['zones'].each_with_index do |zone, i| %>
+  [zones.<%= i %>]
+    name = "<%= zone['name'] %>"
+    ns = "<%= zone['ns'] %>"
+    mbox = "<%= zone['mbox'] %>"
+    serial = <%= zone['serial'] %>
+    refresh = <%= zone['refresh'] %>
+    retry = <%= zone['retry'] %>
+    expire = <%= zone['expire'] %>
+    negcache-ttl = <%= zone['negcache-ttl'] %>
+    soa-ttl = <%= zone['soa-ttl'] %>

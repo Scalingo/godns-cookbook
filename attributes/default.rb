@@ -50,4 +50,5 @@ default['godns'] = {
     'zone-negcache-ttl' => nil,
     'zone-soa-ttl' => nil,
   },
+  'zones': [],
 }
