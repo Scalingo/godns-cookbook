@@ -60,7 +60,7 @@ zone-soa-ttl = <%= node['godns']['hosts']['zone-soa-ttl'] %>
 <% end %>
 
 [zones]
-<% nodes['godns']['zones'].each_with_index do |zone, i| %>
+<% node['godns']['zones'].each_with_index do |zone, i| %>
   [zones.<%= i %>]
     name = "<%= zone['name'] %>"
     ns = "<%= zone['ns'] %>"
