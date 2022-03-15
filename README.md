@@ -36,7 +36,7 @@ e.g.
     <td><tt>['godns']['version']</tt></td>
     <td>string</td>
     <td>Version of the executable</td>
-    <td><tt>v1.7.1</tt></td>
+    <td><tt>v1.7.2</tt></td>
   </tr>
   <tr>
     <td><tt>['godns']['arch']</tt></td>
