@@ -1,7 +1,7 @@
 
 default['godns'] = {
   'download_url' => 'https://github.com/Scalingo/godns/releases/download/',
-  'version' => 'v1.7.1',
+  'version' => 'v1.7.2',
   'arch' => 'amd64',
   'install_path' => '/usr/local/bin',
   'config_path' => '/etc/godns.conf',
