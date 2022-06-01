@@ -131,7 +131,7 @@ GEM
       sfl
     syslog-logger (1.6.8)
     systemu (2.6.5)
-    tomlrb (1.2.9)
+    tomlrb (2.0.3)
     treetop (1.5.3)
       polyglot (~> 0.3)
     uuidtools (2.1.5)
