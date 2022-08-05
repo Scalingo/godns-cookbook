@@ -136,7 +136,7 @@ GEM
       polyglot (~> 0.3)
     uuidtools (2.1.5)
     wmi-lite (1.0.5)
-    yajl-ruby (1.4.2)
+    yajl-ruby (1.4.3)
 
 PLATFORMS
   ruby
