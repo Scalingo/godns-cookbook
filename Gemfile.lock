@@ -135,7 +135,7 @@ GEM
     treetop (1.6.11)
       polyglot (~> 0.3)
     uuidtools (2.1.5)
-    wmi-lite (1.0.5)
+    wmi-lite (1.0.7)
     yajl-ruby (1.4.3)
 
 PLATFORMS
