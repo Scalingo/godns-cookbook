@@ -1,0 +1,7 @@
+dependencies = []
+description = "Cookbook to deploy godns"
+flags = ["tools", "devops"]
+languages = ["ruby"]
+owner = "john@scalingo.com"
+team = "IST"
+version = "1.1.0"
