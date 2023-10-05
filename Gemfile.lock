@@ -139,7 +139,7 @@ GEM
     racc (1.7.1)
     rack (2.2.7)
     rake (13.0.6)
-    rexml (3.2.5)
+    rexml (3.2.6)
     rubyntlm (0.6.3)
     rubyzip (2.3.2)
     rufus-lru (1.1.0)
