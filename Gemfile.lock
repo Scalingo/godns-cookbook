@@ -138,7 +138,7 @@ GEM
     public_suffix (5.0.1)
     racc (1.7.1)
     rack (2.2.7)
-    rake (13.0.6)
+    rake (13.1.0)
     rexml (3.2.6)
     rubyntlm (0.6.3)
     rubyzip (2.3.2)
