@@ -1,6 +1,9 @@
 godns Cookbook
 ================
 
+> [!IMPORTANT]
+> This repository has been deprecated and archived. Scalingo no longer supports it. Feel free to fork it.
+
 Install godns monitoring tool
 
 Requirements
